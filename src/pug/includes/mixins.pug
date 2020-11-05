@@ -2,3 +2,58 @@ mixin icon(name,mod)
 	- mod = mod || ''
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="/img/svg/sprite.svg#" + name)
+
+mixin apSlideritem(img)
+	.swiper-slide
+		.apartment-slider__item
+			.inner-slider.swiper-container
+				.swiper-wrapper
+					.swiper-slide
+						.apartment-slider__img
+							img(src=`${img}`)
+					.swiper-slide
+						.apartment-slider__img
+							img(src=`${img}`)
+					.swiper-slide
+						.apartment-slider__img
+							img(src=`${img}`)
+
+				.swiper-pagination.swiper-pagination_inner
+
+			.apartment-slider__info
+				.apartment-slider__link 
+					a(href="#") Номер «Комфорт»
+
+				ul.apartment-slider__icons
+					li
+						img(src="img/slicon-1.png")
+					li
+						img(src="img/slicon-2.png")
+					li
+						img(src="img/slicon-3.png")
+					li
+						img(src="img/slicon-4.png")
+					li
+						img(src="img/slicon-5.png")
+					li
+						img(src="img/slicon-6.png")
+					li
+						img(src="img/slicon-7.png")
+					li
+						img(src="img/slicon-8.png")
+
+				ul.price-list
+					li
+						.price-list__article Сутки
+						.price-list__price 2 490 ₽
+					li
+						.price-list__article 3 часа
+						.price-list__price 1 490 ₽
+					li
+						.price-list__article Ночь
+						.price-list__price 2 490 ₽
+					li
+						.price-list__article Доп час
+						.price-list__price 250 ₽
+
+				button(type="button").order-btn Забронировать номер

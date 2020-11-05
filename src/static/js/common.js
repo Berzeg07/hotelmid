@@ -27,4 +27,66 @@ $(document).ready(function () {
             }
         }
     });
+
+    var contSlider2 = new Swiper('.inner-slider', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        observer: true,
+        observeParents: true,
+        pagination: {
+            el: '.swiper-pagination_inner',
+            clickable: true,
+        },
+    });
+
+    var myAdvSlider = undefined;
+
+    function initSwiper() {
+        var screenWidth = $(window).width();
+        if (screenWidth > 767 && myAdvSlider == undefined) {
+            var advSlider = new Swiper('.apartment-slider', {
+                slidesPerView: 3,
+                spaceBetween: 80,
+                loop: false,
+                simulateTouch: false,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination_outer',
+                    clickable: true,
+                },
+
+                breakpoints: {
+
+                    1279: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    }
+                }
+            });
+        } else if (screenWidth < 768 && myAdvSlider != undefined) {
+            myAdvSlider.destroy();
+            myAdvSlider = undefined;
+        }
+    }
+
+    //Swiper plugin initialization
+    initSwiper();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
