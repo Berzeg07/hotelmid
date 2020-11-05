@@ -1,1 +1,63 @@
-p Контент
+.reservblock.container
+    .reservblock__column
+        .reservblock__metro
+            .metro-place
+                .metro-place__img
+                    img(src="img/metro-icon.png" width="30" height="30")
+                .metro-place__article Ленинский проспект
+
+            .metro-disstance
+                .metro-disstance__img
+                    img(src="img/walk.png" width="22" height="22")
+
+                .metro-disstance__article 300 м от метро
+
+        .abouthotel
+            .abouthotel__title Мини отель комфорт класса
+            .abouthotel__article C почасовой оплатой! От 1 490 руб.
+
+            .hotelinfo
+                ul.hotelinfo__top
+                    li  Бронирование номеров:
+                    li 
+                        .paymentinfo
+                            .paymentinfo__article Оплата номера картой или наличными
+                            ul.paymentinfo__img
+                                li
+                                    img(src="img/visa.png" width="45" height="45")
+                                li  
+                                    img(src="img/mir.png" width="50" height="15")
+                                li
+                                    img(src="img/master.png" width="83" height="15")
+
+                form.reservform(action="#")
+                    ul.reservform__list
+                        li
+                            input(type="text" placeholder="Дата заезда").reservform__date
+                        li
+                            input(type="text" placeholder="Гостей").reservform__guest
+                        li
+                            .custom-select
+                                select
+                                    option Номер Комфорт
+                                    option Тест 1
+                                    option Тест 2
+                        li
+                            button(type="submit").reservform__btn Забронировать
+
+    .reservblock__column
+        .reserv-gallery__wrap
+            .reserv-gallery__price сутки от 2690 руб.
+            .reserv-gallery.swiper-container
+                .swiper-wrapper
+                    .swiper-slide 
+                        img(src="img/sl-top.jpg")
+                    .swiper-slide 
+                        img(src="img/sl-top.jpg")
+                    .swiper-slide 
+                        img(src="img/sl-top.jpg")
+
+                .swiper-pagination
+
+                .swiper-button-next
+                .swiper-button-prev
