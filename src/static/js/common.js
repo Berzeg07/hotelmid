@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     $('.custom-select select').selectric();
 
-    var contSlider = new Swiper('.reserv-gallery', {
+    var contSlider = new Swiper('.reserv-gallery, .page-gallery', {
         slidesPerView: 1,
         spaceBetween: 10,
         loop: true,

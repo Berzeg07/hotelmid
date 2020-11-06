@@ -677,7 +677,8 @@
     }
 }
 
-.reserv-gallery {
+.reserv-gallery,
+.page-gallery {
     .swiper-pagination {
         bottom: 20px;
 
@@ -1208,6 +1209,39 @@
     }
 }
 
+.price-table__inner {
+    thead {
+        tr {
+            th {
+                &:nth-child(6) {
+                    @media (max-width: 1599px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                &:nth-child(6) {
+                    @media (max-width: 1599px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .price-table__btn {
+        @media (min-width: 1600px) {
+            width: 200px;
+            font-size: 16px;
+        }
+    }
+}
+
 .price-table__btnwrap {
     position: relative;
 }
@@ -1482,5 +1516,227 @@
     @media (min-width: 992px) {
         display: flex;
         align-items: center;
+    }
+}
+
+.pagetop__title {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 15px;
+
+    @media (min-width: 1280px) {
+        font-size: 26px;
+    }
+
+    span {
+        display: block;
+        margin-bottom: 6px;
+
+        @media (min-width: 1280px) {
+            display: inline-block;
+            margin-bottom: 15px;
+
+            &:first-child {
+                margin-right: 25px;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: -16px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 8px;
+                    height: 8px;
+                    background: #FF9E00;
+                    border-radius: 10em;
+                }
+            }
+        }
+    }
+}
+
+.page-gallery-wrap {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.pagetop__roomname {
+    color: #2456AE;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @media (min-width: 1280px) {
+        text-align: left;
+    }
+}
+
+.room-info__title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.room-info__list {
+    margin-bottom: 28px;
+
+    li {
+        position: relative;
+        padding-left: 19px;
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: #FF9E00;
+        }
+    }
+}
+
+.pagetop__lists {
+    @media (max-width: 767px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.price-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    @media (min-width: 1280px) {
+        justify-content: flex-start;
+    }
+
+    li {
+        margin: 2px;
+        margin-bottom: 15px;
+
+        @media (min-width: 1280px) {
+            margin-bottom: 0;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
+        }
+    }
+}
+
+.price-info__item {
+    width: 108px;
+    height: 96px;
+    background: rgba(116, 86, 41, 0.06);
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 16px;
+}
+
+.price-info__article {
+    margin-bottom: 13px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #282423;
+}
+
+.price-info__price {
+    color: #2456AE;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.pagetop__inner {
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    @media (min-width: 1280px) {
+        justify-content: flex-start;
+    }
+
+    .room-info {
+        &:first-child {
+            @media (min-width: 1280px) {
+                margin-right: 40px;
+            }
+
+            @media (min-width: 1600px) {
+                margin-right: 94px;
+            }
+        }
+    }
+}
+
+.order-room {
+    display: block;
+    max-width: 288px;
+    width: 100%;
+    margin: 10px auto 46px;
+    background: #FF9E00;
+    border-radius: 6px;
+    height: 60px;
+    font-size: 18px;
+    color: white;
+
+    @media (min-width: 1280px) {
+        display: none;
+    }
+}
+
+.pagetop {
+    @media (min-width: 1280px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .pagetop__column {
+        &:first-child {
+            @media (min-width: 1280px) {
+                width: 700px;
+            }
+
+            @media (min-width: 1600px) {
+                width: 800px;
+            }
+
+            @media (min-width: 1900px) {
+                width: 900px;
+            }
+        }
+
+        &:last-child {
+            @media (min-width: 1280px) {
+                width: calc(100% - 700px);
+                padding-left: 43px;
+            }
+
+            @media (min-width: 1600px) {
+                width: calc(100% - 800px);
+            }
+
+            @media (min-width: 1900px) {
+                width: calc(100% - 900px);
+            }
+        }
     }
 }
