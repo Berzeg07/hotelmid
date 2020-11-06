@@ -28,6 +28,30 @@ $(document).ready(function () {
         }
     });
 
+    var contSlider = new Swiper('.photogallery', {
+        slidesPerView: 3,
+        spaceBetween: 35,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            767: {
+                slidesPerView: 1.2,
+                spaceBetween: 19,
+            },
+            991: {
+                slidesPerView: 1.4,
+                spaceBetween: 30,
+            }
+        }
+    });
+
     var contSlider2 = new Swiper('.inner-slider', {
         slidesPerView: 1,
         spaceBetween: 10,

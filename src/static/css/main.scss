@@ -787,10 +787,15 @@
     background: url("../img/cont-bg.jpg") no-repeat center;
     background-size: cover;
     padding-top: 24px;
+    margin-bottom: 35px;
 
     @media (min-width: 768px) {
         padding-top: 44px;
         padding-bottom: 30px;
+    }
+
+    @media (min-width: 1280px) {
+        margin-bottom: 55px;
     }
 }
 
@@ -987,5 +992,495 @@
 
     @media (min-width: 1600px) {
         background: #FF9E00 url("../img/key-icon.png") no-repeat center right 80px;
+    }
+}
+
+.hotelruls {
+    .maintitle {
+        margin-bottom: 20px;
+
+        @media (min-width: 1280px) {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.hotelruls__img {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.hotelruls-list {
+    text-align: center;
+    color: #2B3F64;
+    font-size: 14px;
+
+    @media (min-width: 768px) {
+        text-align: left;
+    }
+
+    li {
+        margin-bottom: 20px;
+
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.hotelruls-list__icon {
+    margin-bottom: 15px;
+
+    @media (min-width: 768px) {
+        width: 40px;
+        margin-bottom: 0;
+    }
+}
+
+.hotelruls-list__article {
+    @media (min-width: 768px) {
+        width: calc(100% - 40px);
+        padding-left: 24px;
+    }
+}
+
+.hotelruls__columns {
+    @media (min-width: 992px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hotelruls__column {
+        &:first-child {
+            @media (min-width: 992px) {
+                width: 403px;
+            }
+        }
+
+        &:last-child {
+            @media (min-width: 992px) {
+                width: calc(100% - 403px);
+                padding-left: 50px;
+            }
+        }
+    }
+}
+
+.hotelruls {
+    margin-bottom: 26px;
+
+    @media (min-width: 1280px) {
+        margin-bottom: 99px;
+    }
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+        @media (max-width: 1279px) {
+            margin-bottom: 11px;
+            text-align: center;
+        }
+
+        tr {
+            background: #694B4B;
+            color: white;
+
+            @media (max-width: 1279px) {
+                border-radius: 4px;
+            }
+
+            th {
+                padding: 27px 0px;
+                text-align: center;
+
+                @media (max-width: 1279px) {
+                    background: #694B4B;
+                    padding: 12px 0px;
+                }
+
+                &:first-child {
+                    text-align: left;
+
+                    @media (max-width: 1279px) {
+                        text-align: center;
+                    }
+
+                    @media (min-width: 1280px) {
+                        padding-left: 32px;
+                    }
+                }
+
+                &:not(:first-child) {
+                    @media (max-width: 1279px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            background: rgba(116, 86, 41, 0.06);
+
+            @media (max-width: 1279px) {
+                margin-bottom: 24px;
+                padding: 15px 10px;
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            @media (min-width: 1280px) {
+                &:hover {
+                    background: #FFFFFF;
+                    box-shadow: 2px 2px 30px 10px rgba(40, 39, 98, 0.09);
+
+                    .price-table__check {
+                        display: none;
+                    }
+
+                    .price-table__btn {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            td {
+                @media (max-width: 767px) {
+                    width: 48%;
+                }
+
+                @media (min-width: 768px) and (max-width: 1279px) {
+                    width: 24%;
+                }
+
+                &:first-child {
+                    @media (max-width: 1279px) {
+                        width: 100%;
+                    }
+                }
+
+                &:last-child {
+                    @media (max-width: 1279px) {
+                        width: 100%;
+                    }
+                }
+
+                @media (max-width: 1279px) {
+                    margin-bottom: 17px;
+                }
+
+                @media (min-width: 1280px) {
+                    text-align: center;
+                    height: 80px;
+                    border-top: 4px solid white;
+
+                    &:last-child {
+                        border-bottom: 4px solid white;
+                    }
+
+                    &:first-child {
+                        text-align: left;
+                        padding-left: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.price-table {
+
+    thead,
+    tr,
+    th,
+    td {
+        @media (max-width: 1279px) {
+            display: block;
+        }
+    }
+}
+
+.price-table__btnwrap {
+    position: relative;
+}
+
+.price-table__link {
+    color: #2456AE;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid #2456AE;
+}
+
+.price-table__hidden {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 15px;
+
+    @media (min-width: 1280px) {
+        display: none;
+    }
+}
+
+.price-table__price {
+    font-size: 18px;
+    color: #2B3F64;
+
+    @media (max-width: 1279px) {
+        color: #2B3F64;
+        font-weight: 600;
+    }
+}
+
+.price-table__btn {
+    width: 258px;
+    height: 60px;
+    background: #FF9E00;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    display: block;
+    margin: 0 auto;
+
+    @media (min-width: 1280px) {
+        width: 200px;
+        font-size: 14px;
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media (min-width: 1600px) {
+        font-size: 18px;
+        width: 250px;
+    }
+
+    @media (min-width: 1900px) {
+        font-size: 20px;
+        width: 284px;
+    }
+}
+
+.price-table__check {
+    @media (max-width: 1279px) {
+        display: none;
+    }
+}
+
+.tableblock {
+    margin-bottom: 25px;
+
+    @media (min-width: 1280px) {
+        margin-bottom: 73px;
+    }
+
+    .maintitle {
+        margin-bottom: 15px;
+
+        @media (min-width: 1280px) {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.hotelphotos {
+    margin-bottom: 33px;
+
+    @media (min-width: 1280px) {
+        margin-bottom: 70px;
+    }
+
+    .maintitle {
+        margin-bottom: 25px;
+
+        @media (min-width: 1280px) {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.photogallery {
+    @media (min-width: 991px) {
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .swiper-slide {
+        text-align: center;
+    }
+
+    .swiper-button-next {
+        width: 50px;
+        height: 50px;
+        background: url("../img/arrow-right.png") no-repeat center;
+        right: -13px;
+        top: 45%;
+
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+
+    .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        background: url("../img/arrow-left.png") no-repeat center;
+        left: -13px;
+        top: 45%;
+
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+
+    .swiper-pagination {
+        bottom: 0;
+
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: rgba(163, 170, 192, 0.25);
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #FF4D4D;
+        }
+
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+}
+
+.footer {
+    background: #553E1D;
+    padding: 27px 0px 24px;
+
+    @media (min-width: 1280px) {
+        padding: 46px 0px 43px;
+    }
+
+    .container {
+        @media (max-width: 991px) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}
+
+.footer__recall {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.our-place__footer {
+    margin-bottom: 20px;
+}
+
+.metro-place__footer,
+.our-place__footer,
+.copyright,
+.footer__nav {
+    color: #E6AF78;
+}
+
+.footer__nav {
+    @media (max-width: 991px) {
+        display: none;
+    }
+
+    @media (min-width: 992px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @media (min-width: 1280px) {
+        justify-content: flex-start;
+    }
+
+    li {
+        &:not(:last-child) {
+            @media (min-width: 1280px) {
+                margin-right: 70px;
+            }
+        }
+    }
+}
+
+.footer__bottom {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media (max-width: 991px) {
+        padding-top: 120px;
+
+        .copyright {
+            order: 2;
+        }
+
+        .development {
+            order: 1;
+            margin-bottom: 25px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        padding-top: 177px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.footer__columns {
+    @media (min-width: 992px) {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer__column {
+        &:first-child {
+            @media (min-width: 992px) {
+                width: 400px;
+            }
+        }
+
+        &:last-child {
+            @media (min-width: 992px) {
+                width: calc(100% - 400px);
+            }
+        }
+    }
+}
+
+.development__article {
+    color: #F0C087;
+    font-size: 14px;
+    margin-right: 15px;
+
+    @media (max-width: 991px) {
+        display: none;
+    }
+}
+
+.development {
+    @media (min-width: 992px) {
+        display: flex;
+        align-items: center;
     }
 }
